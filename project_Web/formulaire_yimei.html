@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="scriptJS/Yimei_script_formulaire.js" type="text/javascript"></script>
+	<script src="scriptJS/jquery.easy-autocomplete.min.js" type="text/javascript"></script>
+	<link href="css/style_yimei.css" rel="stylesheet" type="text/css" />
+
+	<title> Fête du Printemps - formulaire Yimei_YUE </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<div id="emballage">
+<div id="photoTete"></div>
+<div class="menu">
+	<ul>
+		<li><a href="page_accueil_yimei.html">Accueil</a></li>
+		<li><a href="coutume_yimei.html">Coutumes</a></li>
+		<li class="first"><a class="current">Formulaire</a></li>
+		<li><a href="QCM_yimei.html">Page QCM</a></li>
+		<li><a href="support_yimei.html">Support</a></li>
+	</ul>
+</div>
+<div id="formulaire">
+	<div id="enTete">
+		<h1>Sondage d'opinions</h1>
+		<h4>Pour mieux savoir les opinions publiques sur les fêtes chinoises, nous souhaitons de connaître vos réponses des questions ci-dessous. Nous vous remercions d’avoir décidé de prendre le temps de participer à ce sondage.</h4>
+	</div>
+
+	<div id="menu">
+	<form action="" method="get" id="f1">
+		<fieldset class="partie1">
+			<legend>Partie 1 : Informations personnelles</legend>
+
+			<!--la première partie avec trois menus déroulants
+				je mets name et id sur chaque menu pour l'affichage et la construiction de récapitulatif avec Javascript-->
+			<label>Nom : </label>
+			<input type="text" name="nom" id="nom"/>
+			<label>Prénom : </label><br/>
+			<input type="text" name="prenom" id="prenom"/><br/>
+			<label>Adresse e-mail : </label><br/>
+			<input type="text" name="email" id="email"/>
+			<label>Année de naissance :</label><br/>
+			<select name="annee_naissance" id="annee_naissance">
+				<option value="1950-1959">1950-1959</option>
+				<option value="1960-1969">1960-1969</option>
+				<option value="1970-1979">1970-1979</option>
+				<option value="1980-1989">1980-1989</option>
+				<option value="1990-1999">1990-1999</option>
+				<option value="2000-2009">2000-2009</option>
+				<option value="2010-2019">2010-2019</option>
+			</select><br/>
+
+			<label>Nationalité :</label><br/>
+			<select name="nationalite" id="nationalite">
+				<option value="Afghanistan">Afghanistan</option>
+				<option value="Algerie">Algérie</option>
+				<option value="Allemagne">Allemagne</option>
+				<option value="Argentine">Argentine</option>
+				<option value="Australie">Australie</option>
+				<option value="Belgique">Belgique</option>
+				<option value="Benin">Bénin</option>
+				<option value="Botswana">Botswana</option>
+				<option value="Bresil">Brésil</option>
+				<option value="Cameroun">Cameroun</option>
+				<option value="Canada">Canada</option>
+				<option value="Chili">Chili</option>
+				<option value="Chine">Chine</option>
+				<option value="Colombie">Colombie</option>
+				<option value="Congo">Congo</option>
+				<option value="Corée du Nord">Corée du Nord</option>
+				<option value="Corée du Sud">Corée du Sud</option>
+				<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+				<option value="Cuba">Cuba</option>
+				<option value="Danemark">Danemark</option>
+				<option value="Egypte">Égypte</option>
+				<option value="Espagne">Espagne</option>
+				<option value="Etats-Unis">États-Unis</option>
+				<option value="Finlande">Finlande</option>
+				<option value="France">France</option>
+				<option value="Grece">Grèce</option>
+				<option value="Inde">Inde</option>
+				<option value="Indonesie">Indonésie</option>
+				<option value="Irak">Irak</option>
+				<option value="Iran">Iran</option>
+				<option value="Japon">Japon</option>
+				<option value="autres pays hors la liste">Autres</option>
+			</select><br/>
+
+			<label>Métier : </label><br/>
+			<!-- je n'ai pas mis la valeur pour chaque option ici
+			et dans le fichier js, je dois récupérer la valeur d'option choisie avec la code "var metier = $( "select#profession option:checked" ).val();" -->
+			<select name="profession" id="profession">
+				<option>administratif</option>
+				<option>aéronautique</option>
+				<option>agriculture / agroalimentaire</option>
+				<option>armée / sécurité / défense</option>
+				<option>architecte</option>
+				<option>art / cinéma / musique</option>
+				<option>assurance</option>
+				<option>automobile</option>
+				<option>économie / banque / finance / commerce / marketing</option>
+				<option>>droit / justice</option>
+				<option>>édition / journalisme</option>
+				<option>>enseignement</option>
+				<option>>fonction publique / management public / social</option>
+				<option>>hôtellerie / restairation</option>
+				<option>>immobilier</option>
+				<option>>industrie</option>
+				<option>>informatique / électronique / numérique</option>
+				<option>>luxe / mode</option>
+				<option>>métiers animaliers</option>
+				<option>>paramédical</option>
+				<option>>psychologie</option>
+				<option>>ressources humaines</option>
+				<option>>santé</option>
+				<option>>sport</option>
+				<option>>tourisme</option>
+			</select><br/>
+		</fieldset>
+
+		<fieldset class="partie2">
+			<!-- la deuxième partie pour savoir la base de niveau de la langue chinoise-->
+			<legend>Partie 2 : Niveau du chinois</legend>
+			<label>Vous parlez le chinois ?</label>
+			<input type="radio" name="parler_chinois" value="oui"/>
+			<label>Oui</label>
+			<input type="radio" name="parler_chinois" value="non"/>
+			<label>Non</label><br/>
+
+			<!--afficher les suivants si OUI-->
+			<div id="parler_chinois">
+				<div id="chinois_maternel">
+					<label>Votre langue maternelle est le chinois ?</label>
+					<input type="radio" name="chinois_maternel" value="oui"/>
+					<label>Oui</label>
+					<input type="radio" name="chinois_maternel" value="non"/>
+					<label>Non</label><br/>
+				</div>
+
+				<!--afficher les suivants si NON-->
+				<div id="chinois_non_maternel">
+					<label>Vous l'avez étudié pour combien de temps :  </label>
+					<select name="temps_etudier_chinois" id="temps_etudier_chinois">
+						<option value="0-1 an">moins d'une année</option>
+						<option value="1-2 an">entre une et deux années</option>
+						<option value="2-3 an">entre deux et trois années</option>
+						<option value="4-6 an">entre quatre et six années</option>
+						<option value="6-10 an">entre six et dix années</option>
+						<option value="10+ an">plus de dix années</option>
+					</select><br/>
+
+					<!-- des cases à cocher -->
+					<label>Comment avez-vous étudié le chinois :  </label><br/>
+					<input type="checkbox" name="maniere_etude" value="Spécialité	universitaire"/>
+					<label>Le chinois est ma spécialité	universitaire.</label><br/>
+					<input type="checkbox" name="maniere_etude" value="Cours de langue dans l'université"/>
+					<label>J'ai choisi le chinois pour le cours de langue dans mon université</label><br/>
+					<input type="checkbox" name="maniere_etude" value="Cours dans un centre de langues (demande de parents)"/>
+					<label>Mes parents me fais l'étudier dans un centre de langues dès mon enfance.</label><br/>
+					<input type="checkbox" name="maniere_etude" value="Cours dans un centre de langues (spontanément)"/>
+					<label>J'ai suivi les cours dans un centre de langues spontanément.</label><br/>
+					<input type="checkbox" name="maniere_etude" value="Auto-apprentissage à la maison"/>
+					<label>J'ai étudié moi-même le chinois à la maison ou bien à l'aide des amis</label><br/>
+
+					<!-- grande zones de texte -->
+					<label>D'autres manières : </label><br/>
+					<textarea id="autres_manieres" rows="5" cols="33" name="autres_maieres"></textarea><br/>
+				</div>
+			</div>	
+		</fieldset>	
+			
+		<fieldset class="partie3">
+			<!-- la troisième partie qui pose les questions sur les expériences de visite en Chine -->
+			<legend>Partie 3 : Vos hostoire avec La Chine</legend>
+			<label>Vous intéressez-vous à la Chine ou la culture chinoise ?</label>
+			<input type="radio" name="gout_culture" value="oui" />
+			<label>Oui</label>
+			<input type="radio" name="gout_culture" value="non"/>
+			<label>Non</label><br/>
+
+			<!-- continuer si OUI -->
+			<div id="gout_culture">
+				<div id="fetes">
+					<!-- des cases à cocher -->
+					<label>Quelles fêtes chinoises connaissez-vous :  </label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête du printemps"/>
+					<label>Fête du printemps (Nouvel An chinois)</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête des lanternes"/>
+					<label>Fête des lanternes</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête Qing Ming"/>
+					<label>Qing Ming (Toussaint chinois)</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête des bateaux dragons"/>
+					<label>Fête des bateaux dragons</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête chinoise des amoureux"/>
+					<label>Fête chinoise des amoureux</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête de la lune"/>
+					<label>Fête de la lune</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Fête du double neuf"/>
+					<label>Fête du double neuf</label><br/>
+					<input type="checkbox" name="fete_chinoise"	value="Réveillon de nouvel an chinois"/>
+					<label>Réveillon de nouvel an chinois</label><br/>
+				</div>
+
+				<div id="viste_chine">
+					<label>Est-ce que vous avez déjà visité la Chine ?</label>
+					<input type="radio" name="viste_chine" value="oui"/>
+					<label>Oui</label>
+					<input type="radio" name="viste_chine" value="non"/>
+					<label>Non</label><br/>
+
+					<!-- continuer si OUI -->
+					<div id="autre_raconte">
+						<label>Vos expériences ou histoires (concernant la Chine) que vous voulez nous raconter : </label><br/>
+						<textarea id="autre_histoire" rows="5" cols="33" name="impression_chine"></textarea><br/>
+					</div>
+
+					<div id="deja_visite">
+						<label>Avez-vous visité la Chine pendant la fête du printemps ?</label>
+						<input type="radio" name="deja_visite" value="oui" />
+						<label>Oui</label>
+						<input type="radio" name="deja_visite" value="non"/>
+						<label>Non</label><br/>
+
+						<!-- continuer si OUI -->
+						<div id="impression_fete_printemps">
+							<label>Quelles impressions que vous avez sur cette fête chinoise ?</label><br/>
+							<textarea id="impression" rows="5" cols="33" name="impression_fete_printemps"></textarea><br/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>	
+		<fieldset id="reponses"></fieldset>
+		<!-- le bouton SUBMIT du formulaire-->
+		<div id="Bsubmit">
+			<input type="submit"/>
+		</div>
+	</form>
+
+	<!-- les boutons pour aller dans la page précédente ou bien pour continuer ou finir -->
+	<button id="b1" class="boutonFormulaire">Suivant >></button>
+	<button id="b2" class="boutonFormulaire">&lt;&lt; Précédent</button>
+	<button id="b3" class="boutonFormulaire">Suivant >></button>
+	<button id="b4" class="boutonFormulaire">&lt;&lt; Précédent</button>
+	<button id="modifier" class="boutonFormulaire">&lt;&lt; Modifier</button>
+	<button id="fini" class="boutonFormulaire">Fin >></button>
+	</div>
+</div>
+<div id="foot">
+	<hr/><p>Contact : yimei.yue@nouvelle-sorbonne.fr<br/>Projet du cours BD Web - <a href="http://www.inalco.fr">Inalco</a></p>
+</div>
+</div>
+</body>
+</html>

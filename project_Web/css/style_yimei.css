@@ -1,0 +1,401 @@
+/* CSS Document */
+/*---------------CSS du style général-------------------*/
+body {
+	background-image: url(../images/image3.jpg); 
+	background-color:#B22222;  /*la couleur du font : rouge foncé*/
+	margin:20px;  /* l'espace de marge à l'extérieur */
+	padding:20px;  /* l'espace de marge à l'intérieur */
+	font-size: 15px;  /* la taille de police */
+}
+
+
+/* définir le style de lien 
+et le changement en posant le souri dessus*/
+a {
+	color:#0000FF; /*bleu brillant*/
+	text-decoration:underline;
+	/* le souri devient un main */
+	cursor: pointer;
+}
+
+a:hover {
+	color:#FFFF33;
+	text-decoration:none;
+}
+
+/* créer un style pour tous les boutons dans la page */
+button {
+	align-self:center;
+    background:#FFEFD5;
+    padding:1rem 1rem;
+    margin:0 1rem;
+
+    /* La propriété transition est une propriété raccourcie pour
+     les propriétés transition-property, 
+     transition-duration, 
+     transition-timing-function,
+     transition-delay. */
+     /* S'applique à toutes les propriétés modifiées */
+    transition:all .5s ease;
+
+    color:#CC6666;
+    letter-spacing:1px;
+    font:14px Myriad Pro, Arial, Helvetica, sans-serif;
+
+    /* le souri devient un main */
+	cursor: pointer;
+    outline:none;
+
+    box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+
+    /*
+    c'est l'abréviation des codes dessous :
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
+    */
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+button:hover {
+	text-decoration:none;
+	background:#CC6666; 
+	color:#FFEFD5; 
+	border:solid 2px #41403E
+}
+
+img {
+	height: 260px;
+	width: 300px;
+	margin:5px auto;
+	padding:10px;
+}
+
+/* une classe pour les images carrées */
+.carre {
+		height: 260px;
+		width: 600px;
+}
+
+/* les styles pour définir les titre de différents niveaux */
+h1
+{font-size:24px;
+text-align:center;
+font-weight:200;
+font-family:Georgia, "Times New Roman", Times, serif;
+color: #FFEFD5;
+}
+h2
+{font-size:24px;
+font-weight:200;
+font-family:Georgia, "Times New Roman", Times, serif;
+color:#FFDEAD;
+}
+h3
+{font-size:24px;
+font-weight:200;
+font-family:Georgia, "Times New Roman", Times, serif;
+color: #FFE4E1;
+}
+
+/* le style de partie où les contenus de page s'affichent */
+#emballage {
+	width:900px auto;
+	background-color:#A52A2A;
+	margin:10px auto;
+	padding:20px;
+}
+
+/* décorer la page tout en haut avec une photo */
+#photoTete {
+	width:900px auto;
+	height:450px;
+
+	/* ajouter une image tout en haut de la page*/
+	background-image: url(../images/image6.jpg); 
+
+	/* préciser la position de cette photo */
+	background-position:50% 60%;
+}
+
+/* le style de deux versions sur l'histoire d'animal Nian*/
+#version1 {
+	background-color:#FADCC2;
+	margin:10px;
+	padding:10px;
+}
+#version2 {
+	background-color:#FA8072;
+	margin:10px;
+	padding:10px;
+}
+
+#to-do ul {
+	/* l'espace entre les éléments sont pris automatiquement */
+	position: relative;
+
+	/* afficher les éléments de liste puce dans une même ligne */
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+/* mettre les photos au niveau horizontal */
+#to-do li {
+	display: inline;
+}
+
+#to-do div {
+	display: inline;
+}
+
+/* définir le style du premier élément de la liste puce */ 
+#to-do li:first-child {
+	display: block;
+	width: auto;
+	height: auto;
+	margin: 2px;
+	padding: 2px;
+	background: transparent;
+	border: 1px solid #FFDEAD;
+	color:#FFDEAD;
+}
+
+/* le style pour le pied du page */
+#foot {
+	padding:10px; 
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+/* la classe "focus_pic" est utilisée pour donner les style 
+et définir le style hover de l'image sous div-focus_pic */
+.focus_pic {
+	font-size:15px;
+	font-weight:200;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	text-align:center;
+	-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+}
+.focus_pic:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+/* décorer les images de classe "do_img" */
+.do_img {
+  border: 10px solid #fff;  
+  height: 120px;
+  width: 190px;
+  margin: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  
+  -webkit-box-shadow: 5px 5px 5px #111;
+          box-shadow: 5px 5px 5px #111;  
+}
+
+/* grandir un peu l'image quand le souris y pose */
+.do_img:hover { 
+  height: 150px;
+  width: 230px; 
+}
+
+/* le style des classes notées contenu */
+.contenu {
+	width:auto;
+	height:auto;
+	margin:10px;
+	padding:20px;
+	/* ajouter l'ombre autour de boîte
+	offset-x | offset-y | blur-radius | color */
+	box-shadow:0 0 10px #000;
+}
+
+/* créer un style d'un menu horizontal avec la liste puce */
+.menu {
+	width:900px auto;
+	height:40px;
+	padding-top:5px;
+	background-color:#CC6666;
+}
+
+.menu ul {
+	margin:5px;
+	padding:5px; 
+	text-align:center;
+}
+.menu li {
+	/* mettre les éléments au niveau horizontal */
+	display:inline;
+	padding:10px 20px 0px 20px;
+	list-style-type:none; 
+}
+.menu li a {
+	text-decoration:none;
+	color:#FADCC2;
+	font:16px Myriad Pro, Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+}
+.menu li.first{background:none}
+.menu li a:hover{text-decoration:none; color:#ffffff;}
+.menu li a.current{text-decoration:none; color:#ffffff;}
+
+/* créer un style d'un menu vertical avec la liste puce */
+.menuVertical {
+	width:auto;
+	height:auto;
+	padding:5px;
+	margin:20px;
+	/* mettre le menu à gauche */
+	float: left ;
+	/* ajouter l'ombre derrière */
+	box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+	/* ajouter le cadre autour */
+	border:solid 2px #41403E
+}
+
+.menuVertical ul {
+	margin:5px;
+	padding:5px; 
+	text-align:center;
+	border-radius:25px;
+}
+.menuVertical li {
+	/*padding (l'espace) : en haut, droite, bas, gauche*/
+	padding:5px 5px 0px 5px;
+	list-style-type:none; 
+}
+
+/* réduire un peu la partie du contenu de la page */	
+.corps {
+	padding: 10px;
+	margin: 10px auto;
+	width:80%;
+	align-self:center;
+}
+
+/*--------------CSS du style de formulaire et QCM-------------------*/
+input[type=text] {
+  padding: 5px;
+  margin:5px 0; /* margin en haut et en bas */
+  border-radius:5px;
+}
+
+input[type=radio] {
+  padding: 5px;
+  margin:5px 0;
+}
+
+input[type=checkbox] {
+  padding: 5px;
+  margin:5px 5px;
+}
+
+/* définir le style et le changement de style pour le bouton Submit */
+input[type=submit] {
+  padding: 5px;
+  margin:5px 5px;
+  border-radius:5px;
+}
+input[type=submit]:hover {
+  border: 1px solid #aaa;
+  background-color:blue;
+  color:white;
+}
+
+textarea{
+	padding: 10px;
+	margin:10px 0;
+
+	/* utiliser le même style que le cadre d'autres pages */
+	border-radius:255px 15px 225px 15px/15px 225px 15px 255px;
+}
+textarea:hover {
+	border: 1px solid #aaa;
+}
+
+select {
+  width: 30%;
+  padding:5px;
+  border-radius:10px;
+}
+
+legend {
+	font-size:18px;
+	padding: 5px;
+    margin:5px 5px;
+}
+
+label {
+	font-size:15px; 
+	padding: 5px 5px;
+    margin:5px 5px;
+}
+
+.boutonFormulaire {
+  padding:10px;
+  margin:5px 5px;
+  border:none;
+  background-color:#3F51B5;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:150px;
+}
+
+/* le style de retour pour une réponse correcte de QCM */
+.correct {
+	color : #FADCC2 ; /* couleur jaune léger */
+	background-color: green ;
+}
+
+.incorrect {
+	color : #FADCC2 ; /* couleur jaune léger */
+	background-color: red ;
+}
+
+/* pour réduire la case de formulaire et QCM */
+#formulaire {
+	padding: 10px;
+	margin: 10px auto;
+	width:60%;
+	align-self:center;
+}
+
+/*------------CSS style pour le tableau-------------------------*/
+table{
+	width: 100%;
+	padding:5px;
+	margin:10px;
+	border: 1px solid black;
+	border-collapse: collapse;
+
+} 
+
+th, td  {
+	padding:5px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+caption {
+	text-align: center;
+	padding:10px;
+	margin:5px;
+	font-size:20px;
+	color: #FFE4C4;
+}
+
+td {
+	text-align: center;
+}
+
